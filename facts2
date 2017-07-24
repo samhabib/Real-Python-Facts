@@ -1,0 +1,106 @@
+5. Function Argument Unpacking is another awesome feature of Python. One can unpack a list or a dictionary as function arguments using * and ** respectively. This is commonly known as the Splat operator. Example here
+
+def point(x, y):
+    print(x,y)
+ 
+foo_list = (3, 4)
+bar_dict = {'y': 3, 'x': 2}
+ 
+point(*foo_list) # Unpacking Lists
+point(**bar_dict) # Unpacking Dictionaries
+Run on IDE
+Output:
+
+3 4
+2 3
+6. Want to find the index inside a for loop? Wrap an iterable with ‘enumerate’ and it will yield the item along with its index. See this code snippet
+
+# Know the index faster
+vowels=['a','e','i','o','u']
+for i, letter in enumerate(vowels):
+    print (i, letter)
+Run on IDE
+Output:
+
+(0, 'a')
+(1, 'e')
+(2, 'i')
+(3, 'o')
+(4, 'u')
+7. One can chain comparison operators in Python answer= 1<x<10 is executable in Python. More examples here
+
+# Chaining Comparison Operators
+i = 5;
+ 
+ans = 1 < i < 10
+print(ans)
+ 
+ans = 10 > i <= 9
+print(ans)
+ 
+ans = 5 == i
+print(ans)
+Run on IDE
+Output:
+
+True
+True
+True
+8. We can’t define Infinities right? But wait! Not for Python. See this amazing example
+
+# Positive Infinity
+p_infinity = float('Inf')
+ 
+if 99999999999999 > p_infinity:
+    print("The number is greater than Infinity!")
+else:
+    print("Infinity is greatest")
+ 
+# Negetive Infinity
+n_infinity = float('-Inf')
+if -99999999999999 < n_infinity:
+    print("The number is lesser than Negative Infinity!")
+else:
+    print("Negative Infinity is least")
+Run on IDE
+Output:
+
+Infinity is greatest
+Negative Infinity is least
+9. Instead of building a list with a loop, one can build it more concisely with a list comprehension. See this code for more understanding.
+
+# Simple List Append
+a = []
+for x in range(0,10):
+    a.append(x)
+print(a)
+ 
+# List Comprehension
+print([x for x in a])
+Run on IDE
+Output:
+
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+10. Finally, Python’s special Slice Operator. It is a way to get items from lists, as well as change them. See this code snippet
+
+# Slice Operator
+a = [1,2,3,4,5]
+ 
+print(a[0:2]) # Choose elements [0-2), upper-bound noninclusive
+ 
+print(a[0:-1]) # Choose all but the last
+ 
+print(a[::-1]) # Reverse the list
+ 
+print(a[::2]) # Skip by 2
+ 
+print(a[::-2]) # Skip by -2 from the back
+Run on IDE
+Output:
+
+[1, 2]
+[1, 2, 3, 4]
+[5, 4, 3, 2, 1]
+[1, 3, 5]
+[5, 3, 1]
