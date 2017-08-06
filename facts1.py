@@ -6,6 +6,7 @@ import this
 
 One can return multiple values in Python. Don’t believe ? See the below code snippet:
 
+
 # Multiple Return Values in Python!
 def func():
    return 1, 2, 3, 4, 5
